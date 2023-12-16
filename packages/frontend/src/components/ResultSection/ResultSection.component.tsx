@@ -1,7 +1,7 @@
-import { useAppContext } from '../../hooks'
 import { useCallback, useEffect, useState } from 'react'
-import { AppContextResult } from '../../providers/AppContextProvider/AppContext.type'
 import { Box, Button, Table, TableBody, TableCell, TableFooter, TableHead, TableRow, Typography } from '@mui/material'
+import { useAppContext } from '../../hooks'
+import { AppContextResult } from '../../providers/AppContextProvider/AppContext.type'
 import { Result } from '../Result'
 
 export const ResultSection = () => {
@@ -15,7 +15,7 @@ export const ResultSection = () => {
 
   const handleRemove = useCallback((input: string) =>
     setResults(current => current.filter(r => r.input !== input)),
-    [setResults])
+  [setResults])
 
   useEffect(() => {
     if (result) {
@@ -33,11 +33,11 @@ export const ResultSection = () => {
 
   return (
     <Box sx={{
+      alignItems: 'flex-start',
+      alignSelf: 'stretch',
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start',
-      justifyContent: 'center',
-      alignSelf: 'stretch'
+      justifyContent: 'center'
     }}>
       <Typography variant="h3" component="h2">Result</Typography>
       {!results.length && (

@@ -1,6 +1,6 @@
 import NumericInput from '../db/models/NumericInput.model'
-import { numericInputRepository } from '../db/repository'
 import { logger } from '../util/logger'
+import { numericInputRepository } from '../db/repository'
 
 const log = logger({ name: 'orchestrator/input' })
 

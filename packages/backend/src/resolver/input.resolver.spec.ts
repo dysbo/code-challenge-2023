@@ -13,7 +13,7 @@ jest.mock('../orchestrator', () => ({
 }))
 
 describe('input resolver tests', () => {
-  const { res, next, mockClear } = getMockRes()
+  const { res, mockClear } = getMockRes()
 
   beforeEach(() => {
     mockClear()

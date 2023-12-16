@@ -1,7 +1,7 @@
 import { Link, TableCell, TableRow } from '@mui/material'
-import { ResultProps } from './Result.type'
 import { useCallback, useMemo } from 'react'
 import { useAppContext } from '../../hooks'
+import { ResultProps } from './Result.type'
 
 export const Result = ({ input, inputTimesTwo, inputTimesTwoSquared, removeResult }: ResultProps) => {
   const { result } = useAppContext()

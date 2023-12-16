@@ -1,6 +1,6 @@
 import { Column, Model, PrimaryKey, Table } from 'sequelize-typescript'
 
-@Table({ tableName: 'numeric_input', createdAt: false, updatedAt: false })
+@Table({ createdAt: false, tableName: 'numeric_input', updatedAt: false })
 class NumericInput extends Model {
   @PrimaryKey
   @Column

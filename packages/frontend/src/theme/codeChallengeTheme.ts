@@ -23,25 +23,25 @@ export const codeChallengeTheme = createTheme({
   direction: 'ltr',
   palette: {
     primary: {
-      main: '#FF0080',
-      light: '#FFE8F3'
+      light: '#FFE8F3',
+      main: '#FF0080'
     },
     secondary: {
       main: '#8000FF'
     }
   },
   typography: {
-    fontFamily: 'Helvetica, Arial, sans-serif',
-    fontSize: 14,
     allVariants: {
       lineHeight: '1.5'
     },
     body1: {
-      fontSize: '1rem',
       '@media (max-width: 575px)': {
         fontSize: '0.85rem'
-      }
+      },
+      fontSize: '1rem'
     },
+    fontFamily: 'Helvetica, Arial, sans-serif',
+    fontSize: 14,
     h1: {
       '@media (max-width: 575px)': {
         fontSize: '2.4rem'

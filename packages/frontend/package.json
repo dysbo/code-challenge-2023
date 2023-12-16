@@ -7,7 +7,8 @@
     "clean": "rimraf ./build",
     "start": "node scripts/start.js",
     "test": "jest",
-    "test:badges": "yarn test && jest-coverage-badges output \"./badges\""
+    "test:badges": "yarn test && jest-coverage-badges output \"./badges\"",
+    "test:lint": "eslint ./src/"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
@@ -34,7 +35,6 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "eslint": "^8.3.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
@@ -154,6 +154,10 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "jest-environment-jsdom": "^29.7.0"
   }
 }

@@ -1,14 +1,14 @@
 import { createContext, PropsWithChildren, useCallback, useState } from 'react'
-import { AppContext, AppContextResult } from './AppContext.type'
 import { useCalculationCall } from '../../hooks'
+import { AppContext, AppContextResult } from './AppContext.type'
 
 export const appContext = createContext<AppContext>({
   clearResult: () => {
   },
   input: '',
   onSubmit: () => Promise.resolve(),
-  setError: (_) => {},
-  setInput: (_) => {}
+  setError: () => {},
+  setInput: () => {}
 })
 
 export const AppContextProvider = ({ children }: PropsWithChildren) => {

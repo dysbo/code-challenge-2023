@@ -1,6 +1,6 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react'
-import { Input } from './Input.component'
+import { act, fireEvent, render } from '@testing-library/react'
 import { AppContextProvider } from '../../providers'
+import { Input } from './Input.component'
 
 jest.mock('./../../hooks/useCalculationCall', () => ({
   useCalculationCall: () => (s: string) => {

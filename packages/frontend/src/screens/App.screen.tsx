@@ -1,5 +1,5 @@
-import { Header, Input, Instructions } from '../components'
 import { Container, Divider } from '@mui/material'
+import { Header, Input, Instructions } from '../components'
 import { ResultSection } from '../components/ResultSection'
 
 export const App = () => (

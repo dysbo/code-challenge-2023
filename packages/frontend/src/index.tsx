@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ThemeProvider } from '@mui/material'
 import reportWebVitals from './reportWebVitals'
 import { App } from './screens'
-import { ThemeProvider } from '@mui/material'
 import { codeChallengeTheme } from './theme'
 import { AppContextProvider } from './providers'
 
