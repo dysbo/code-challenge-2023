@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from '@mui/material'
+import { Box, Button, FormGroup, TextField } from '@mui/material'
 import React, { useCallback } from 'react'
 import { useAppContext } from '../../hooks'
 
@@ -6,7 +6,7 @@ export const Input = () => {
   const { error, input, onSubmit: onContextSubmit, result, setError, setInput } = useAppContext()
 
   const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setError(undefined)
+    setError(' ')
     setInput(e.target.value.replaceAll(/[^(\d|.)]/gmi, ''))
   }, [setError, setInput])
 
@@ -25,6 +25,12 @@ export const Input = () => {
     setInput('')
   }, [input, onContextSubmit, result?.input, setError, setInput])
 
+  const onKeyUp = useCallback(async (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!!input && e.key.toLowerCase() === 'enter') {
+      onSubmit().then()
+    }
+  }, [input, onSubmit])
+
   return (
     <Box sx={{
       alignItems: 'flex-start',
@@ -42,8 +48,9 @@ export const Input = () => {
         inputProps={{
           ['data-testid']: 'input-number',
           maxLength: 15
-      }}
+        }}
         onChange={onChange}
+        onKeyUp={onKeyUp}
         value={input}
       />
       <Button

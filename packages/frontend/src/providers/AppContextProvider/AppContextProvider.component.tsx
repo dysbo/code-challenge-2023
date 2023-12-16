@@ -7,22 +7,20 @@ export const appContext = createContext<AppContext>({
   },
   input: '',
   onSubmit: () => Promise.resolve(),
-  setError: (_?: string) => {
-  },
-  setInput: (_: string) => {
-  }
+  setError: (_) => {},
+  setInput: (_) => {}
 })
 
 export const AppContextProvider = ({ children }: PropsWithChildren) => {
   const calculate = useCalculationCall()
 
-  const [error, setError] = useState<string>()
+  const [error, setError] = useState<string>(' ')
   const [input, setInput] = useState<string>('')
   const [result, setResult] = useState<AppContextResult>()
 
   const clearResult = useCallback(() => {
     setResult(undefined)
-    setError(undefined)
+    setError(' ')
   }, [])
 
   const onSubmit = useCallback(async () => {

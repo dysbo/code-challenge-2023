@@ -1,5 +1,6 @@
-import { Header, Input, Instructions, Result } from '../components'
+import { Header, Input, Instructions } from '../components'
 import { Container, Divider } from '@mui/material'
+import { ResultSection } from '../components/ResultSection'
 
 export const App = () => (
   <Container data-testid="container-main">
@@ -7,6 +8,6 @@ export const App = () => (
     <Instructions />
     <Divider />
     <Input />
-    <Result />
+    <ResultSection />
   </Container>
 )

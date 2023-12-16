@@ -23,7 +23,8 @@ export const codeChallengeTheme = createTheme({
   direction: 'ltr',
   palette: {
     primary: {
-      main: '#FF0080'
+      main: '#FF0080',
+      light: '#FFE8F3'
     },
     secondary: {
       main: '#8000FF'
@@ -34,6 +35,42 @@ export const codeChallengeTheme = createTheme({
     fontSize: 14,
     allVariants: {
       lineHeight: '1.5'
+    },
+    body1: {
+      fontSize: '1rem',
+      '@media (max-width: 575px)': {
+        fontSize: '0.85rem'
+      }
+    },
+    h1: {
+      '@media (max-width: 575px)': {
+        fontSize: '2.4rem'
+      }
+    },
+    h2: {
+      '@media (max-width: 575px)': {
+        fontSize: '2.2rem'
+      }
+    },
+    h3: {
+      '@media (max-width: 575px)': {
+        fontSize: '2rem'
+      }
+    },
+    h4: {
+      '@media (max-width: 575px)': {
+        fontSize: '1.8rem'
+      }
+    },
+    h5: {
+      '@media (max-width: 575px)': {
+        fontSize: '1.6rem'
+      }
+    },
+    h6: {
+      '@media (max-width: 575px)': {
+        fontSize: '1.4rem',
+      }
     }
   }
 })

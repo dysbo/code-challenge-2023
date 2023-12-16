@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 export interface AppContextResult {
   input: string
   inputTimesTwo: string
@@ -10,6 +12,6 @@ export interface AppContext {
   input: string
   onSubmit: () => Promise<void>
   result?: AppContextResult
-  setError: (s?: string) => void
-  setInput: (s: string) => void
+  setError: Dispatch<SetStateAction<string>>
+  setInput: Dispatch<SetStateAction<string>>
 }
