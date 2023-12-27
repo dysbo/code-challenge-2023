@@ -1,5 +1,8 @@
 import { Request, Response } from 'express'
 import { inputOrchestrator } from '../orchestrator'
+import { logger } from '../util/logger'
+
+const log = logger({ name: 'InputResolver' })
 
 export const inputResolver = async (req: Request, res: Response) => {
   try {
@@ -13,6 +16,7 @@ export const inputResolver = async (req: Request, res: Response) => {
       inputTimesTwoSquared
     })
   } catch (error) {
-    res.status(500).send(error)
+    log.error((error as Error).message)
+    res.status(500).send('Unable to update database!')
   }
 }

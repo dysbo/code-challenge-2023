@@ -21,8 +21,12 @@ export const Input = () => {
       return
     }
 
-    await onContextSubmit()
-    setInput('')
+    try {
+      await onContextSubmit()
+      setInput('')
+    } catch (e) {
+      console.log('Error submitting result!', (e as Error).message)
+    }
   }, [input, onContextSubmit, result?.input, setError, setInput])
 
   const onKeyUp = useCallback(async (e: React.KeyboardEvent<HTMLInputElement>) => {

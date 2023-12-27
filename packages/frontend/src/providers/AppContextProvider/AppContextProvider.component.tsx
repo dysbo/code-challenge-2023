@@ -1,4 +1,5 @@
 import { createContext, PropsWithChildren, useCallback, useState } from 'react'
+
 import { useCalculationCall } from '../../hooks'
 import { AppContext, AppContextResult } from './AppContext.type'
 
@@ -7,8 +8,10 @@ export const appContext = createContext<AppContext>({
   },
   input: '',
   onSubmit: () => Promise.resolve(),
-  setError: () => {},
-  setInput: () => {}
+  setError: () => {
+  },
+  setInput: () => {
+  }
 })
 
 export const AppContextProvider = ({ children }: PropsWithChildren) => {
@@ -24,7 +27,15 @@ export const AppContextProvider = ({ children }: PropsWithChildren) => {
   }, [])
 
   const onSubmit = useCallback(async () => {
-    setResult(await calculate(input))
+    try {
+      setError('')
+      setResult(await calculate(input))
+    } catch (e) {
+      setError('Error communicating with server!')
+      setResult(undefined)
+      // handle on the page
+      throw e
+    }
   }, [calculate, input])
 
   return (

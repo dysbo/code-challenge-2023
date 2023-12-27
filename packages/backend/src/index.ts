@@ -14,7 +14,11 @@ app.use(cors())
 app.post('/input/:input', inputResolver)
 
 app.listen(port, async () => {
-  await sequelize.authenticate()
-  await runMigrations()
+  try {
+    await sequelize.authenticate()
+    await runMigrations()
+  } catch (e) {
+    log.error(`Unable to run migrations: ${(e as Error).message}`)
+  }
   log.info(`listening on port ${port}`)
 })

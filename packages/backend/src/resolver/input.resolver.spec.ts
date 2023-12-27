@@ -24,7 +24,7 @@ describe('input resolver tests', () => {
     const req = getMockReq({ params: { input: '4' } })
     await expect(inputResolver(req, res)).resolves.toBeUndefined()
     expect(res.status).toHaveBeenCalledWith(500)
-    expect(res.send).toHaveBeenCalledWith(new Error('broken!!!'))
+    expect(res.send).toHaveBeenCalledWith('Unable to update database!')
   })
 
   test('should return result when input parses to float', async () => {
