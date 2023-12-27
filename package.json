@@ -9,7 +9,8 @@
     "start": "lerna run --parallel start",
     "start:docker": "lerna run start:docker --scope=backend",
     "stop:docker": "lerna run stop:docker --scope=backend",
-    "test": "lerna run --parallel test:badges",
+    "test": "lerna run --parallel test",
+    "test:badges": "lerna run --parallel test:badges",
     "test:lint": "lerna run --parallel test:lint",
     "prepare": "husky install"
   },
