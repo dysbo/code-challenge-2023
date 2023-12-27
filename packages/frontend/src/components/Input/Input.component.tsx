@@ -25,7 +25,7 @@ export const Input = () => {
       await onContextSubmit()
       setInput('')
     } catch (e) {
-      console.log('Error submitting result!', (e as Error).message)
+      console.error('Error submitting result!', (e as Error).message)
     }
   }, [input, onContextSubmit, result?.input, setError, setInput])
 

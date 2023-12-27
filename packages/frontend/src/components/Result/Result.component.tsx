@@ -18,7 +18,7 @@ export const Result = ({ input, inputTimesTwo, inputTimesTwoSquared, removeResul
       <TableCell data-testid={`result-nTimesTwo-${input}`}>{inputTimesTwo}</TableCell>
       <TableCell data-testid={`result-nTimesTwoSquared-${input}`}>{inputTimesTwoSquared}</TableCell>
       <TableCell data-testid={`result-actions-${input}`}>
-        <Link href="#" color="error" onClick={handleRemove}>
+        <Link data-testid={`result-actions-${input}-remove`} href="#" color="error" onClick={handleRemove}>
           Remove
         </Link>
       </TableCell>
