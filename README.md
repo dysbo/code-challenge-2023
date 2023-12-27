@@ -37,15 +37,17 @@ The following are required to get up and running with this project:
    
    This will pull the MySQL docker dependency and get the container set up for use.
 
-   Run the following command to retrieve logs:
+   Run the following command to view recent logs:
    ```
-   docker logs -f sw-code-challenge-mysql
+   docker logs sw-code-challenge-mysql
    ```
 
    When you see this message at the end, you are ready to rock:
    ```
    [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.2.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
    ```
+
+   If you don't see it right away, check again after a few seconds.
 
 ### 3. Start the project.
 
