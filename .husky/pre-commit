@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+yarn test:lint
+yarn test:badges
+git add packages/**/badges

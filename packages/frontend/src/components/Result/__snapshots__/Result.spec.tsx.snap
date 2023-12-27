@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result tests should show result when it is provided 1`] = `
+<div>
+  <table
+    class="MuiTable-root css-rqglhn-MuiTable-root"
+  >
+    <tbody
+      class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-bwjzc7-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          data-testid="result-n-3"
+        >
+          3
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          data-testid="result-nTimesTwo-3"
+        >
+          6
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          data-testid="result-nTimesTwoSquared-3"
+        >
+          36
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+          data-testid="result-actions-3"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-l69lu0-MuiTypography-root-MuiLink-root"
+            data-testid="result-actions-3-remove"
+            href="#"
+          >
+            Remove
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
