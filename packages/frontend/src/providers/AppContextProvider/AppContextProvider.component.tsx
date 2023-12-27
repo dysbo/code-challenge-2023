@@ -28,7 +28,7 @@ export const AppContextProvider = ({ children }: PropsWithChildren) => {
 
   const onSubmit = useCallback(async () => {
     try {
-      setError('')
+      setError(' ')
       setResult(await calculate(input))
     } catch (e) {
       setError('Error communicating with server!')
